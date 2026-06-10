@@ -1,0 +1,60 @@
+funcao menu() {
+	escreva("\n")
+	escreva("1- Somar")
+	escreva("2- Subtrair")
+	escreva("3- Multiplicar")
+	escreva("4- Dividir")
+	escreva("0- Sair")
+}
+
+funcao escolhas() {
+	
+	enquanto (verdadeiro) {
+		var tecla = numero(leia("\nQual operação você deseja fazer: "))
+
+		se (tecla == 1) {
+			var num1soma = numero(leia("\nNúmero 1: "))
+			var num2soma = numero(leia("\nNúmero 2: "))
+
+			var resultadosoma = num1soma + num2soma
+	
+			escreva("\nResultado: ", resultadosoma)
+		}senao se (tecla == 2) {
+			var num1sub = numero(leia("\nNúmero 1: "))
+			var num2sub = numero(leia("\nNúmero 2: "))
+
+			var resultadosub = num1sub - num2sub
+
+			escreva("\nResultado: ", resultadosub)
+		}senao se (tecla == 3) {
+			var num1mul = numero(leia("\nNúmero 1: "))
+			var num2mul = numero(leia("\nNúmero 2: "))
+		
+			var resultadomul = num1mul * num2mul
+
+			escreva("\nResultado: ", resultadomul)
+		}senao se (tecla == 4) {
+			var num1div = numero(leia("\nNúmero 1: "))
+			var num2div = numero(leia("\nNúmero 2: "))
+
+			var resultadodiv = num1div / num2div
+
+			escreva("\nResultado: ", resultadodiv)
+	
+		}senao se (tecla == 0){
+			escreva("\nSaindo...")
+			sustar
+		}senao {
+			escreva("Tecla indisponível")
+			sustar
+		}
+	}
+}
+
+funcao calculadora() {
+	escreva("CALCULADORA")
+	menu()
+	escolhas()
+}
+
+calculadora()
